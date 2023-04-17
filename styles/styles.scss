@@ -1,9 +1,74 @@
 body {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   background-color: rgb(2, 3, 34);
 }
-div{
-  color: rgb(203, 207, 255);
+
+#app{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.title{
   text-align: center;
+  color: rgb(202, 186, 186);
   font-size: 1.5rem;
+}
+
+.mainContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  #searchForm{
+    display: flex;
+    margin-bottom: 20px;
+    input{
+      border-radius: 5px;
+      background-color: rgb(202, 186, 186);
+      color: rgb(2, 3, 34);
+      text-align: center;
+      padding: .8rem;
+      margin: .5rem;
+    }
+    #giftLimitInput::-webkit-outer-spin-button,
+    #giftLimitInput::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    #giftLimitInput{
+      -moz-appearance: textfield;
+      appearance: textfield;
+    }
+    button{
+      border-radius: 5px;
+      background-color: rgb(202, 186, 186);
+      color: rgb(2, 3, 34);
+      text-align: center;
+      padding: 1rem;
+      margin: .5rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
   }
+  #giftContainer{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .img-container{
+      width: 150px;
+      height: 150px;
+      margin: 5px;
+      img{
+        width: 100%;
+        height: 100%;
+        border: 2px solid rgb(202, 186, 186);
+      }
+    }
+  }
+}

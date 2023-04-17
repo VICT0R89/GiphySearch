@@ -13,9 +13,9 @@ const Main = () => {
   main.innerHTML=`
     <div class="mainContainer">
       <form id="searchForm">
-        <input id="giftInput" placeholder="busca tu gift"/>
-        <input type="number" id="giftLimitInput" value="15" min="1" max="15"/>
-        <button id="searchBtn">buscar</button>
+        <input id="giftInput" placeholder="BUSCA TU GIFT" required/>
+        <input type="number" id="giftLimitInput" value="15" min="1" max="30"/>
+        <button id="searchBtn">BUSCAR</button>
       </form>
       <div id="giftContainer"></div>
     </div>
@@ -45,8 +45,10 @@ const addGift = data => {
       console.log(gifts.images.fixed_height_small.url);
       let gift = gifts.images.fixed_height_small.url;
       return`
+      <div class="img-container">
         <img src="${gift}">
-      `
+      </div>
+        `
     }).join("")
     )  
 }
